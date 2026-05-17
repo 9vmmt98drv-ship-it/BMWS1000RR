@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW S1000RR Wiki+</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>BMW S1000RR (2009)</h1>
+    <p>Интерактивная энциклопедия</p>
+
+</header>
+
+<main>
+
+    <!--ИНФОРМАЦИЯ -->
+    <section class="info">
+
+        <img src="bmw.jpg.jpg" class="bike-img">
+
+        <h2>О мотоцикле</h2>
+
+        <p>
+            BMW S1000RR (2009) — один из самых известных супербайков своего времени.
+            Модель сочетает мощность, технологии и агрессивный дизайн.
+        </p>
+
+    </section>
+
+    <!-- ХАРАКТЕРИСТИКИ -->
+    <section class="info">
+
+        <h2>Характеристики</h2>
+
+        <ul>
+            <li>Цена: 25 000 – 30 000 €</li>
+            <li>Мощность: 193 л.с.</li>
+            <li>Максимальная скорость: 305 км/ч</li>
+            <li>Двигатель: 999 см³, 4-цилиндровый</li>
+            <li>Масса: 183 кг</li>
+            <li>0–100 км/ч: ~3.1 сек</li>
+        </ul>
+
+    </section>
+
+    <!-- ЗВУКИ -->
+    <section class="buttons">
+
+        <div class="left-buttons">
+
+            <button onclick="playSound('idle')">Звук на нейтрали</button>
+            <button onclick="playSound('ride')">Звук езды</button>
+
+        </div>
+
+        <div class="right-buttons">
+
+            <button onclick="playSound('music1')">Музыка 1</button>
+            <button onclick="playSound('music2')">Музыка 2</button>
+
+        </div>
+
+    </section>
+
+    <!-- 3D -->
+    <div class="center-3d">
+
+        <button onclick="toggle3D()">Показать 3D модель</button>
+
+    </div>
+
+    <!-- AUDIO -->
+    <audio id="idle" src="idle.mp3"></audio>
+    <audio id="ride" src="ride.mp3"></audio>
+    <audio id="music1" src="music1.mp3"></audio>
+    <audio id="music2" src="music2.mp3"></audio>
+
+    <!-- CANVAS -->
+    <section id="viewer">
+        <canvas id="threeCanvas"></canvas>
+    </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
